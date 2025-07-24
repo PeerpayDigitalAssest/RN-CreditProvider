@@ -18,7 +18,7 @@ export default function BackButton({ color, onPress }: BackButtonProps) {
     return (
         <View style={{ paddingLeft: 15 }}>
             <TouchableOpacity onPress={handlePress}>
-                <IconSymbol name="arrow.left" color={color ?? "#fff"} />
+                <IconSymbol name="chevron.left" color={color ?? "#fff"} />
             </TouchableOpacity>
         </View>
     );

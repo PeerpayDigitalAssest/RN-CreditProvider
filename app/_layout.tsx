@@ -12,30 +12,38 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-      Montserrat: require('../assets/fonts/Montserrat.ttf'),
-  });
+    const colorScheme = useColorScheme();
+    const [loaded, fontError] = useFonts({
+        'Montserrat-Regular': require('../assets/fonts/Montserrat-Regular.ttf'),
+        'Montserrat-Bold': require('../assets/fonts/Montserrat-Bold.ttf'),
+        'Montserrat-SemiBold': require('../assets/fonts/Montserrat-SemiBold.ttf'),
+        'Montserrat-Light': require('../assets/fonts/Montserrat-Light.ttf'),
+        'Montserrat-ExtraBold': require('../assets/fonts/Montserrat-ExtraBold.ttf'),
+        'Montserrat-ExtraLight': require('../assets/fonts/Montserrat-ExtraLight.ttf'),
+        'Montserrat-Medium': require('../assets/fonts/Montserrat-Medium.ttf'),
+        'Montserrat-Black': require('../assets/fonts/Montserrat-Black.ttf'),
+        'Montserrat-Thin': require('../assets/fonts/Montserrat-Thin.ttf'),
+    });
 
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
+    useEffect(() => {
+        if (loaded || fontError) {
+            SplashScreen.hideAsync();
+        }
+    }, [loaded, fontError]);
+
+    if (!loaded && !fontError) {
+        // Async font loading only occurs in development.
+        return null;
     }
-  }, [loaded]);
 
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
-
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(home)" options={{ headerShown: false }} />
-        <Stack.Screen name="peerpay" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="light" />
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+            <Stack>
+                <Stack.Screen name="(home)" options={{ headerShown: false }} />
+                <Stack.Screen name="peerpay" options={{ headerShown: false }} />
+                <Stack.Screen name="+not-found" />
+            </Stack>
+            <StatusBar style="light" />
+        </ThemeProvider>
+    );
 }

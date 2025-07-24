@@ -6,6 +6,7 @@ import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { AppFonts } from '@/constants/styles';
 
 export default function HomeBottomLayout() {
     const colorScheme = useColorScheme();
@@ -27,7 +28,7 @@ export default function HomeBottomLayout() {
                     }),
                 },
                 tabBarLabelStyle: {
-                    fontFamily: 'Montserrat',
+                    fontFamily: AppFonts.Regular,
                     fontSize: 12,
                 },
             }}
@@ -36,7 +37,7 @@ export default function HomeBottomLayout() {
                    name="profile"
                    options={{
                      title: 'Profile',
-                     tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.2" color={color} />,
+                     tabBarIcon: ({ color }) => <IconSymbol size={28} name="person" color={color} />,
                    }}
                  />
             <Tabs.Screen

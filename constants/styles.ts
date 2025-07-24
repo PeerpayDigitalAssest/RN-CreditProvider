@@ -1,5 +1,18 @@
 import { StyleSheet } from 'react-native';
 
+// Define your font families.
+export const AppFonts = {
+    Regular: "Montserrat-Regular",
+    Medium: "Montserrat-Medium",
+    SemiBold: "Montserrat-SemiBold",
+    Bold: "Montserrat-Bold",
+    Black: "Montserrat-Black",
+    Light: "Montserrat-Light",
+    ExtraLight: "Montserrat-ExtraLight",
+    Thin: "Montserrat-Thin",
+    ExtraBold: "Montserrat-ExtraBold",
+};
+
 export const appStyles = StyleSheet.create({
     screen: {
         flex: 1,
@@ -54,52 +67,52 @@ export const appStyles = StyleSheet.create({
         borderColor: 'grey',
         padding: 8,
         borderRadius: 4,
-        fontFamily: 'Montserrat'
+        fontFamily: AppFonts.Regular
     },
     // TEXTS
     text38: {
         fontSize: 38,
         fontWeight: '700',
-        fontFamily: 'Montserrat',
+        fontFamily: AppFonts.Bold,
         color: 'white'
     },
     text24: {
         fontSize: 24,
         fontWeight: '500',
-        fontFamily: 'Montserrat',
+        fontFamily: AppFonts.SemiBold,
         color: 'white'
     },
     text18: {
         fontSize: 18,
-        fontFamily: 'Montserrat',
+        fontFamily: AppFonts.Regular,
         color: 'white'
     },
     text16: {
         fontSize: 16,
-        fontFamily: 'Montserrat',
+        fontFamily: AppFonts.Regular,
         color: 'white'
     },
     text14: {
         fontSize: 14,
-        fontFamily: 'Montserrat',
+        fontFamily: AppFonts.Regular,
         color: 'white'
     },
     text12: {
         fontSize: 12,
         fontWeight: '400',
-        fontFamily: 'Montserrat',
+        fontFamily: AppFonts.Light,
         color: 'white'
     },
     text10: {
         fontSize: 10,
         fontWeight: '400',
-        fontFamily: 'Montserrat',
+        fontFamily: AppFonts.Light,
         color: 'white'
     },
     text8: {
         fontSize: 8,
         fontWeight: '400',
-        fontFamily: 'Montserrat',
+        fontFamily: AppFonts.Light,
         color: 'white'
     },
 });
