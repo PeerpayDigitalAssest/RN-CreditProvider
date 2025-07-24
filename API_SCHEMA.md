@@ -56,7 +56,9 @@ This is the **list** of notifications based on credit request or credit approval
 For now, it is only **"Credit Reuqest"** that I am aware of. We will likely give params for other kinds of notifications:
 
 - notificationType: string (example: creditRequest) - This gives the frontend the kind of notification coming in for the user.
---------------- This is specifically for credit request ------------------
+
+**--------------- This is specifically for credit request ------------------**
+
 - nameOfRquester: string (example: John Doe) - This is the name of the person requesting for credit.
 - bankName: string (example: Access Bank) - This is the bank of the person requesting for credit.
 - accountNumber: string (example: 1234567890) - This is the account number of the person requesting for credit.
