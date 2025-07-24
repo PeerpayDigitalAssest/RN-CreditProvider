@@ -73,7 +73,8 @@ For now, it is only **"Credit Reuqest"** that I am aware of. We will likely give
 - totalCreditScore: number (example: 99.40) - This will be the cumulative sum of the credit receiver's credit score including all their co-signers.
 - creditRemark: string (example: The borrower is qualified to get a loan approval) - This will be the remark based on the total score, if the user can get a loan or not.
 - isUserQualified: boolean (example: false) - This will be true if the user can get a loan, false otherwise. This is for the (frontend) developer
---------------- This is end of credit request ------------------
+
+**--------------- This is end of credit request ------------------**
 
 ## APIs SCHEMA
 
